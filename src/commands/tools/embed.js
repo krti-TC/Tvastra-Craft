@@ -9,10 +9,13 @@ module.exports = {
         .setTitle('About the Bot')
         .setDescription(`in future i will tell who i am`)
         .setColor(0x18e1ee)
+        .setFooter({
+            text: 'wait for the future',
+          });
 
         await interaction.reply({
             embeds: [embed]
-        })
+        });
     },
 
 
