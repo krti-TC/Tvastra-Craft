@@ -16,7 +16,7 @@ module.exports = {
         const button = new ButtonBuilder()
             .setCustomId('mine')
             .setLabel('mine')
-            .setStyle(ButtonStyle.Primary);    
+            .setStyle(ButtonStyle.Danger);    
 
 
         await interaction.reply({
