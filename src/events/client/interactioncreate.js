@@ -1,7 +1,8 @@
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 
-const fs = require("fs")
+const fs = require("fs");
+const mine = require('../../commands/tools/mine');
 
 module.exports = {
     name: 'interactionCreate',
@@ -24,7 +25,7 @@ module.exports = {
             if (!button) return new Error(`this is an error in button`);
 
             try {
-                await button.execute(interaction, client);
+                await mine.execute(interaction, client);
             } catch (err) {
                 console.error(err);
             }
