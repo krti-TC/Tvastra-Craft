@@ -16,8 +16,7 @@ module.exports = {
         const mine = new ButtonBuilder()
             .setCustomId('mine')
             .setLabel('mine')
-            .setStyle(ButtonStyle.Success)  
-    
+            .setStyle(ButtonStyle.Success);    
         
         const chop = new ButtonBuilder()
             .setCustomId('chop')
