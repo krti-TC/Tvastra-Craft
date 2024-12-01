@@ -22,10 +22,14 @@ module.exports = {
             .setCustomId('chop')
             .setLabel('chop')
             .setStyle(ButtonStyle.Danger);    
-    
+        
+        const fight = new ButtonBuilder()
+            .setCustomId('fight')
+            .setLabel('fight')
+            .setStyle(ButtonStyle.Success)    
 
         await interaction.reply({
             embeds: [embed],
-            components: [new ActionRowBuilder().addComponents(mine,chop)]      });
+            components: [new ActionRowBuilder().addComponents(mine,chop,fight)]      });
     },
 }
