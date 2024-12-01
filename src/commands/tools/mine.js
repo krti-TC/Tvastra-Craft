@@ -7,7 +7,7 @@ module.exports = {
     async execute(interaction, client) {
         const embed = new EmbedBuilder()
             .setTitle('Mining')
-            .setDescription(`now mining will not work, So please wait for some time `)
+            .setDescription(`now mining will not work,`+ Math.floor(Math.random() * 11) +` So please wait for some time `)
             .setColor(0x18e1ee)
             .setThumbnail('https://i.imgur.com/6zQpQ6C.png')
             .addFields(
