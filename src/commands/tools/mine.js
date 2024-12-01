@@ -18,7 +18,7 @@ module.exports = {
             .setLabel('mine')
             .setStyle(ButtonStyle.Danger);    
         
-            const chop = new ButtonBuilder()
+        const chop = new ButtonBuilder()
             .setCustomId('chop')
             .setLabel('chop')
             .setStyle(ButtonStyle.Danger);    
@@ -26,8 +26,6 @@ module.exports = {
 
         await interaction.reply({
             embeds: [embed],
-            components: [new ActionRowBuilder().addComponents(mine)],
-            components: [new ActionRowBuilder().addComponents(chop)]
-        });
+            components: [new ActionRowBuilder().addComponents(mine,chop)]      });
     },
 }
