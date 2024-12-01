@@ -2,26 +2,32 @@ const { SlashCommandBuilder, EmbedBuilder, Embed, ActionRowBuilder, ButtonBuilde
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('mine')
-        .setDescription(`if you want to mine,Click on this`),
+        .setName('work')
+        .setDescription(`if you want to do work,Click on this`),
     async execute(interaction, client) {
         const embed = new EmbedBuilder()
-            .setTitle('Mining')
-            .setDescription(`now mining will not work,`+ Math.floor(Math.random() * 11) +` So please wait for some time `)
+            .setTitle('work')
+            .setDescription(`now there is no work ,So please wait for some time `)
             .setColor(0x18e1ee)
-            .setThumbnail('https://i.imgur.com/6zQpQ6C.png')
+            .setThumbnail(client.user?.displayAvatarURL() ?? 'default_avatar_url')
             .addFields(
-                { name: 'Mining', value: 'Mining is not working now' },
+                { name: 'no work', value: 'this is new bot so it take time' },
             )
-        const button = new ButtonBuilder()
+        const mine = new ButtonBuilder()
             .setCustomId('mine')
             .setLabel('mine')
             .setStyle(ButtonStyle.Danger);    
-
+        
+            const chop = new ButtonBuilder()
+            .setCustomId('chop')
+            .setLabel('chop')
+            .setStyle(ButtonStyle.Danger);    
+    
 
         await interaction.reply({
             embeds: [embed],
-            components: [new ActionRowBuilder().addComponents(button)]
+            components: [new ActionRowBuilder().addComponents(mine)],
+            components: [new ActionRowBuilder().addComponents(chop)]
         });
     },
 }
