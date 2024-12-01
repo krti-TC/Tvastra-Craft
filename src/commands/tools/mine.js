@@ -16,12 +16,13 @@ module.exports = {
         const mine = new ButtonBuilder()
             .setCustomId('mine')
             .setLabel('mine')
-            .setStyle(ButtonStyle.Danger);    
+            .setStyle(ButtonStyle.Success)  
+    
         
         const chop = new ButtonBuilder()
             .setCustomId('chop')
             .setLabel('chop')
-            .setStyle(ButtonStyle.Danger);    
+            .setStyle(ButtonStyle.Success);    
         
         const fight = new ButtonBuilder()
             .setCustomId('fight')
