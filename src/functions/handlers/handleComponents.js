@@ -12,10 +12,10 @@ module.exports = (client) => {
         const { button } = client
         function handleComponents(folder) {
         switch (folder) {
-            case "mine":
+            case "buttons":
                 for (const file of componentFiles) {
                     const button = require(`../../components/${folder}/${file}`);
-                    button.set(mine.data.name, mine);
+                    button.set(button.data.name, button);
                 }
 
 
