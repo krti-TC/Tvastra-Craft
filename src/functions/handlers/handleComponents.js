@@ -1,5 +1,4 @@
 const { readdirSync } = require('fs');
-const mine = require('../../commands/tools/mine');
 
 module.exports = (client) => {
     client.handleComponents = async () => {
