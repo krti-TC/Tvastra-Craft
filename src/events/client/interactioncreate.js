@@ -21,8 +21,8 @@ module.exports = {
         } else if  (interaction.isButton()) {
             const { buttons } = client;
             const { customId } = interaction;
-            const button = buttons.get(customId);
-            if (!button) return new Error(`this is an error in button`);
+            const mine = buttons.get(customId);
+            if (!mine) return new Error(`this is an error in button`);
 
             try {
                 await mine.execute(interaction, client);
