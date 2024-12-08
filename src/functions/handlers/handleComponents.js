@@ -1,4 +1,5 @@
 const { readdirSync } = require('fs');
+const mine = require('../../commands/tools/mine');
 
 module.exports = (client) => {
     client.handleComponents = async () => {
@@ -14,7 +15,7 @@ module.exports = (client) => {
             case "mine":
                 for (const file of componentFiles) {
                     const button = require(`../../components/${folder}/${file}`);
-                    button.set(button.data.name, button);
+                    button.set(mine.data.name, mine);
                 }
 
 

@@ -1,3 +1,8 @@
+const { REST } = require('@discordjs/rest');
+const { Routes } = require('discord-api-types/v9');
+
+const fs = require("fs");
+const mine = require('../../commands/tools/mine');
 
 module.exports = {
     name: 'interactionCreate',
