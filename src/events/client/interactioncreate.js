@@ -22,10 +22,10 @@ module.exports = {
             const { buttons } = client;
             const { customId } = interaction;
             const button = buttons.get(customId);
-            if (!mine) return new Error(`this is an error in button`);
+            if (!button) return new Error(`this is an error in button`);
 
             try {
-                await mine.execute(interaction, client);
+                await button.execute(interaction, client);
             } catch (err) {
                 console.error(err);
             }

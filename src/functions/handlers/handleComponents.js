@@ -9,13 +9,13 @@ module.exports = (client) => {
 
         }
 
-        const { button } = client
+        const { buttons } = client
         function handleComponents(folder) {
         switch (folder) {
             case "buttons":
                 for (const file of componentFiles) {
                     const button = require(`../../components/${folder}/${file}`);
-                    button.set(button.data.name, button);
+                    buttons.set(button.data.name, button);
                 }
 
 
